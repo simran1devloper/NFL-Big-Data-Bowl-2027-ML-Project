@@ -1,0 +1,10 @@
+file,format,size_mb,rows,cols,id_columns,cols_with_missing,n_game_plays,content,use
+combine_results.csv,csv,0.0,510,18,"draft_year, nfl_id",9,,Traditional Combine measurements (1 row/prospect),Primary (baseline features)
+combine_tracking.csv,csv,83.8,463189,14,"draft_year, event_id, nfl_id, drill_type, drill_name, attempt",0,,10 Hz Combine drill tracking (player + ball),Primary (movement features)
+game_tracking_2023.csv,csv,335.5,3665443,12,"game_id, play_id, nfl_id",1,31690.0,"10 Hz in-game tracking, prospects only, 2023 season",Primary (game movement)
+game_tracking_2024.csv,csv,718.0,7827944,12,"game_id, play_id, nfl_id",1,40331.0,"10 Hz in-game tracking, prospects only, 2024 season",Primary (game movement)
+game_tracking_2025.csv,csv,1022.6,11160903,12,"game_id, play_id, nfl_id",1,42544.0,"10 Hz in-game tracking, prospects only, 2025 season",Primary (game movement)
+games.csv,csv,0.0,1002,7,"game_id, game_key, season, season_type, week",0,,"Game metadata: season, week, season type",Primary (REG filter)
+player_career_successes.csv,csv,0.0,510,9,nfl_id,0,,Career snaps / starts / honours (1 row/prospect),Secondary outcome
+player_play.csv,csv,146.9,314197,64,"game_id, play_id, nfl_id",45,,1 row per player per play; NGS route & separation fields,Primary (outcome + context)
+players.csv,csv,0.0,510,10,"nfl_id, draft_year",3,,"Player master: position, draft year, draft slot",Primary (cohort)

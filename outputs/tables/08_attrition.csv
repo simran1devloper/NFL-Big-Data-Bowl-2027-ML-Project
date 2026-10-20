@@ -1,0 +1,10 @@
+stage,unique WRs
+Prospects in players.csv (all positions),510
+NFL-listed WRs drafted/signed 2023-25,106
+  ...with Combine tracking frames,106
+  ...with >=1 detected hard-break drill (break_index),105
+  ...with any player_play row,105
+  ...with REG-season routes + separation,82
+  ...with >= 50 REG routes (SOE analysis set),68
+  ...and break_index + 40/10/jumps/size complete (primary regression),56
+  ...with game hitch-break decel (>=10 detected hitches),59

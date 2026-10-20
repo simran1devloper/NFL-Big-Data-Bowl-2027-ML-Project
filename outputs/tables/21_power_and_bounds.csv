@@ -1,0 +1,15 @@
+quantity,value
+Per-drill break-index agreement (mean pairwise r),0.17795355812177305
+Mean hard-break drills per WR (k),2.8035714285714284
+Reliability of break index (Spearman-Brown),0.3776863420461759
+Mean reliability of SOE in primary sample,0.7051277356186211
+Max observable r if true r = 1 (attenuation ceiling),0.5160592167000799
+Observed partial r (break index | covariates),-0.24682785729891318
+"Smallest observed partial |r| detectable, 80% power, n=56",0.3949367405566347
+...equivalent TRUE r after attenuation,0.7652934542706977
+WRs needed to detect a true r = 0.30,334.0
+WRs needed to detect a true r = 0.20,743.0
+"Coef CI upper bound, yd/route per SD (observed index)",0.004631294221611834
+Upper bound per SD of TRUE break skill (÷ sqrt(rel_x)),0.0075359278556067655
+Lower bound per SD of TRUE break skill (÷ sqrt(rel_x)),-0.11954892015921592
+"Between-player SD of true SOE (tau, yd/route)",0.16836301337477128

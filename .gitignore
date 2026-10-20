@@ -1,0 +1,8 @@
+# Raw NFL tracking and source data (keep local; do not commit)
+/nfl-big-data-bowl-2027/*.csv
+
+# Local editor and Python artifacts
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.DS_Store

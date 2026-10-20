@@ -1,0 +1,7 @@
+measure,method,n_players,r,spearman_brown
+Combine break decel,mean pairwise r between the 3 drills,90,0.19869391135748157,
+Combine break re-accel,mean pairwise r between the 3 drills,90,0.07133667664376836,
+Combine launch,split-half over drills,106,0.06193980628686961,0.11665408137104402
+Combine top speed,Go route vs 40-yd dash,85,0.4515985678535533,
+Game hitch decel,split-half over plays,59,0.5284746106930482,0.6915059066024326
+Game GO-route peak speed,split-half over plays,67,0.7516398194258704,0.8582127570863662

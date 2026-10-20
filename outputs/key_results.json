@@ -1,0 +1,963 @@
+{
+ "sep_rows": 30566,
+ "sep_players": 82,
+ "soe_players_min": 68,
+ "ctx_r2": 0.27509546655490125,
+ "tau": 0.16836301337477128,
+ "sigma": 1.7921854145439455,
+ "soe_split_half": 0.5445095754697474,
+ "soe_sb": 0.7050905790650603,
+ "median_routes": 249.0,
+ "soe_q4_minus_q1_routes_positive": 8,
+ "soe_n_routes_checked": 8,
+ "soe_rho_tgt": 0.09321678054739092,
+ "soe_p_tgt": 0.44959977068939133,
+ "soe_rho_yds": 0.12516700385540327,
+ "soe_p_yds": 0.3091419901635688,
+ "attrition": {
+  "Prospects in players.csv (all positions)": 510,
+  "NFL-listed WRs drafted/signed 2023-25": 106,
+  "  ...with Combine tracking frames": 106,
+  "  ...with >=1 detected hard-break drill (break_index)": 105,
+  "  ...with any player_play row": 105,
+  "  ...with REG-season routes + separation": 82,
+  "  ...with >= 50 REG routes (SOE analysis set)": 68,
+  "  ...and break_index + 40/10/jumps/size complete (primary regression)": 56,
+  "  ...with game hitch-break decel (>=10 detected hitches)": 59
+ },
+ "top_r2_forty": 0.1292648136621054,
+ "top_r2_both": 0.21279082965690121,
+ "top_n": 62,
+ "top_coef": 0.5502289105083342,
+ "top_p": 0.09194280148361383,
+ "translation": {
+  "Top speed (positive control)": {
+   "n": 66,
+   "pearson_r": 0.4785,
+   "ci_low": 0.2616,
+   "ci_high": 0.6423,
+   "p": 0.0
+  },
+  "40-yd time vs game top speed": {
+   "n": 62,
+   "pearson_r": -0.3595,
+   "ci_low": -0.5727,
+   "ci_high": -0.1094,
+   "p": 0.0041
+  },
+  "Launch acceleration": {
+   "n": 73,
+   "pearson_r": -0.0096,
+   "ci_low": -0.195,
+   "ci_high": 0.1883,
+   "p": 0.9356
+  },
+  "Break deceleration": {
+   "n": 58,
+   "pearson_r": 0.0068,
+   "ci_low": -0.2966,
+   "ci_high": 0.3147,
+   "p": 0.9597
+  },
+  "Break index vs game hitch decel": {
+   "n": 58,
+   "pearson_r": -0.1019,
+   "ci_low": -0.3524,
+   "ci_high": 0.1727,
+   "p": 0.4464
+  }
+ },
+ "prim_n": 56,
+ "prim_coef": -0.03441945928497658,
+ "prim_lo": -0.073470212791565,
+ "prim_hi": 0.004631294221611834,
+ "prim_p": 0.08407457897430252,
+ "prim_boot_lo": -0.07290729372631122,
+ "prim_boot_hi": 0.014495151801783878,
+ "prim_dr2": 0.03034879566687343,
+ "assoc": {
+  "trk_break_index": {
+   "n": 56,
+   "coef_yd_per_SD": -0.0344,
+   "ci_low": -0.0735,
+   "ci_high": 0.0046,
+   "p": 0.0841,
+   "p_BH": 0.0841
+  },
+  "trk_break_decel": {
+   "n": 56,
+   "coef_yd_per_SD": -0.0293,
+   "ci_low": -0.0763,
+   "ci_high": 0.0177,
+   "p": 0.2218,
+   "p_BH": 0.7357
+  },
+  "trk_break_reaccel": {
+   "n": 56,
+   "coef_yd_per_SD": -0.029,
+   "ci_low": -0.0692,
+   "ci_high": 0.0111,
+   "p": 0.1562,
+   "p_BH": 0.7357
+  },
+  "trk_launch": {
+   "n": 57,
+   "coef_yd_per_SD": -0.0029,
+   "ci_low": -0.0759,
+   "ci_high": 0.0702,
+   "p": 0.9386,
+   "p_BH": 0.9386
+  },
+  "trk_top_speed": {
+   "n": 57,
+   "coef_yd_per_SD": 0.0319,
+   "ci_low": -0.0799,
+   "ci_high": 0.1437,
+   "p": 0.5761,
+   "p_BH": 0.7682
+  },
+  "trk_route_peak_accel": {
+   "n": 57,
+   "coef_yd_per_SD": 0.0325,
+   "ci_low": -0.0259,
+   "ci_high": 0.0909,
+   "p": 0.2759,
+   "p_BH": 0.7357
+  },
+  "g_hitch_decel": {
+   "n": 49,
+   "coef_yd_per_SD": -0.025,
+   "ci_low": -0.0807,
+   "ci_high": 0.0306,
+   "p": 0.3785,
+   "p_BH": 0.7568
+  },
+  "g_top_speed": {
+   "n": 56,
+   "coef_yd_per_SD": 0.0202,
+   "ci_low": -0.0349,
+   "ci_high": 0.0752,
+   "p": 0.473,
+   "p_BH": 0.7568
+  },
+  "g_launch": {
+   "n": 57,
+   "coef_yd_per_SD": 0.009,
+   "ci_low": -0.0434,
+   "ci_high": 0.0614,
+   "p": 0.7369,
+   "p_BH": 0.8421
+  }
+ },
+ "max_vif": 3.1109205001350784,
+ "prim_coef_drop3": -0.04463194619688937,
+ "rel_break_index": 0.3776863420461759,
+ "rel_soe_primary": 0.7051277356186211,
+ "ceiling": 0.5160592167000799,
+ "partial_r": -0.24682785729891318,
+ "r_mde_obs": 0.3949367405566347,
+ "r_mde_true": 0.7652934542706977,
+ "need_n_30": 334,
+ "need_n_20": 743,
+ "prim_hi_true": 0.0075359278556067655,
+ "prim_lo_true": -0.11954892015921592,
+ "ml_n": 68,
+ "ml": [
+  {
+   "algo": "baseline",
+   "model": "A0 Training mean",
+   "n_repeats": 20,
+   "rmse": 0.1443,
+   "rmse_sd": 0.0013,
+   "mae": 0.1136,
+   "r2": -0.029,
+   "r2_sd": 0.018,
+   "loyo_rmse": 0.1406
+  },
+  {
+   "algo": "rf",
+   "model": "A1 Draft year",
+   "n_repeats": 20,
+   "rmse": 0.147,
+   "rmse_sd": 0.0022,
+   "mae": 0.115,
+   "r2": -0.0679,
+   "r2_sd": 0.0326,
+   "loyo_rmse": 0.1405
+  },
+  {
+   "algo": "rf",
+   "model": "B Traditional Combine",
+   "n_repeats": 20,
+   "rmse": 0.1253,
+   "rmse_sd": 0.0029,
+   "mae": 0.0958,
+   "r2": 0.2233,
+   "r2_sd": 0.0362,
+   "loyo_rmse": 0.1197
+  },
+  {
+   "algo": "rf",
+   "model": "C Combine tracking",
+   "n_repeats": 20,
+   "rmse": 0.145,
+   "rmse_sd": 0.0038,
+   "mae": 0.1156,
+   "r2": -0.0399,
+   "r2_sd": 0.0544,
+   "loyo_rmse": 0.1371
+  },
+  {
+   "algo": "rf",
+   "model": "D Traditional + tracking",
+   "n_repeats": 20,
+   "rmse": 0.1273,
+   "rmse_sd": 0.003,
+   "mae": 0.0983,
+   "r2": 0.1984,
+   "r2_sd": 0.0378,
+   "loyo_rmse": 0.1215
+  },
+  {
+   "algo": "ridge",
+   "model": "A1 Draft year",
+   "n_repeats": 20,
+   "rmse": 0.1447,
+   "rmse_sd": 0.0013,
+   "mae": 0.1139,
+   "r2": -0.0349,
+   "r2_sd": 0.0184,
+   "loyo_rmse": 0.1406
+  },
+  {
+   "algo": "ridge",
+   "model": "B Traditional Combine",
+   "n_repeats": 20,
+   "rmse": 0.1235,
+   "rmse_sd": 0.0039,
+   "mae": 0.0954,
+   "r2": 0.2448,
+   "r2_sd": 0.0473,
+   "loyo_rmse": 0.115
+  },
+  {
+   "algo": "ridge",
+   "model": "C Combine tracking",
+   "n_repeats": 20,
+   "rmse": 0.1503,
+   "rmse_sd": 0.0058,
+   "mae": 0.1175,
+   "r2": -0.1186,
+   "r2_sd": 0.0894,
+   "loyo_rmse": 0.1432
+  },
+  {
+   "algo": "ridge",
+   "model": "D Traditional + tracking",
+   "n_repeats": 20,
+   "rmse": 0.1287,
+   "rmse_sd": 0.0045,
+   "mae": 0.0986,
+   "r2": 0.1798,
+   "r2_sd": 0.0577,
+   "loyo_rmse": 0.1173
+  }
+ ],
+ "ml_pairs": [
+  {
+   "comparison": "D Traditional + tracking minus B Traditional Combine",
+   "algo": "ridge",
+   "mean_rmse_diff": 0.0052,
+   "p2.5": 0.0001,
+   "p97.5": 0.0104,
+   "share_repeats_first_better": 0.05
+  },
+  {
+   "comparison": "D Traditional + tracking minus B Traditional Combine",
+   "algo": "rf",
+   "mean_rmse_diff": 0.002,
+   "p2.5": -0.0,
+   "p97.5": 0.0049,
+   "share_repeats_first_better": 0.05
+  },
+  {
+   "comparison": "C Combine tracking minus A1 Draft year",
+   "algo": "ridge",
+   "mean_rmse_diff": 0.0056,
+   "p2.5": -0.0006,
+   "p97.5": 0.0196,
+   "share_repeats_first_better": 0.05
+  },
+  {
+   "comparison": "C Combine tracking minus A1 Draft year",
+   "algo": "rf",
+   "mean_rmse_diff": -0.002,
+   "p2.5": -0.0088,
+   "p97.5": 0.0052,
+   "share_repeats_first_better": 0.8
+  },
+  {
+   "comparison": "B Traditional Combine minus A1 Draft year",
+   "algo": "ridge",
+   "mean_rmse_diff": -0.0211,
+   "p2.5": -0.0249,
+   "p97.5": -0.0164,
+   "share_repeats_first_better": 1.0
+  },
+  {
+   "comparison": "B Traditional Combine minus A1 Draft year",
+   "algo": "rf",
+   "mean_rmse_diff": -0.0217,
+   "p2.5": -0.024,
+   "p97.5": -0.0171,
+   "share_repeats_first_better": 1.0
+  }
+ ],
+ "fs_cv": [
+  {
+   "model": "A1 Draft year",
+   "rmse": 0.1405,
+   "rmse_sd": 0.0021,
+   "mae": 0.1135,
+   "share_repeats_beating_B": 0.0
+  },
+  {
+   "model": "B Traditional Combine",
+   "rmse": 0.1193,
+   "rmse_sd": 0.0041,
+   "mae": 0.0944,
+   "share_repeats_beating_B": 0.0
+  },
+  {
+   "model": "B + break index",
+   "rmse": 0.1192,
+   "rmse_sd": 0.0047,
+   "mae": 0.0933,
+   "share_repeats_beating_B": 0.5
+  },
+  {
+   "model": "B + tracked top speed",
+   "rmse": 0.1213,
+   "rmse_sd": 0.0048,
+   "mae": 0.0956,
+   "share_repeats_beating_B": 0.1
+  },
+  {
+   "model": "D Traditional + all tracking",
+   "rmse": 0.1253,
+   "rmse_sd": 0.0056,
+   "mae": 0.098,
+   "share_repeats_beating_B": 0.0
+  }
+ ],
+ "fs_loyo": [
+  {
+   "heldout_year": 2023,
+   "n_test": 28,
+   "model": "A1 Draft year",
+   "rmse": 0.21,
+   "mae": 0.1625,
+   "d_rmse_vs_B": 0.0233,
+   "ci_low": -0.0048,
+   "ci_high": 0.0461
+  },
+  {
+   "heldout_year": 2023,
+   "n_test": 28,
+   "model": "B Traditional Combine",
+   "rmse": 0.1867,
+   "mae": 0.1516,
+   "d_rmse_vs_B": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  },
+  {
+   "heldout_year": 2023,
+   "n_test": 28,
+   "model": "B + break index",
+   "rmse": 0.1845,
+   "mae": 0.1487,
+   "d_rmse_vs_B": -0.0022,
+   "ci_low": -0.0052,
+   "ci_high": 0.0005
+  },
+  {
+   "heldout_year": 2023,
+   "n_test": 28,
+   "model": "B + tracked top speed",
+   "rmse": 0.189,
+   "mae": 0.153,
+   "d_rmse_vs_B": 0.0023,
+   "ci_low": -0.0023,
+   "ci_high": 0.008
+  },
+  {
+   "heldout_year": 2023,
+   "n_test": 28,
+   "model": "D Traditional + all tracking",
+   "rmse": 0.1956,
+   "mae": 0.1589,
+   "d_rmse_vs_B": 0.0089,
+   "ci_low": 0.0013,
+   "ci_high": 0.0173
+  },
+  {
+   "heldout_year": 2024,
+   "n_test": 23,
+   "model": "A1 Draft year",
+   "rmse": 0.1274,
+   "mae": 0.1146,
+   "d_rmse_vs_B": 0.0107,
+   "ci_low": -0.0223,
+   "ci_high": 0.0493
+  },
+  {
+   "heldout_year": 2024,
+   "n_test": 23,
+   "model": "B Traditional Combine",
+   "rmse": 0.1167,
+   "mae": 0.0974,
+   "d_rmse_vs_B": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  },
+  {
+   "heldout_year": 2024,
+   "n_test": 23,
+   "model": "B + break index",
+   "rmse": 0.1165,
+   "mae": 0.0949,
+   "d_rmse_vs_B": -0.0002,
+   "ci_low": -0.0056,
+   "ci_high": 0.0047
+  },
+  {
+   "heldout_year": 2024,
+   "n_test": 23,
+   "model": "B + tracked top speed",
+   "rmse": 0.1146,
+   "mae": 0.0975,
+   "d_rmse_vs_B": -0.0022,
+   "ci_low": -0.0047,
+   "ci_high": 0.0011
+  },
+  {
+   "heldout_year": 2024,
+   "n_test": 23,
+   "model": "D Traditional + all tracking",
+   "rmse": 0.113,
+   "mae": 0.0969,
+   "d_rmse_vs_B": -0.0037,
+   "ci_low": -0.0092,
+   "ci_high": 0.0027
+  },
+  {
+   "heldout_year": 2025,
+   "n_test": 17,
+   "model": "A1 Draft year",
+   "rmse": 0.2329,
+   "mae": 0.1988,
+   "d_rmse_vs_B": 0.0537,
+   "ci_low": 0.0244,
+   "ci_high": 0.0833
+  },
+  {
+   "heldout_year": 2025,
+   "n_test": 17,
+   "model": "B Traditional Combine",
+   "rmse": 0.1792,
+   "mae": 0.1532,
+   "d_rmse_vs_B": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  },
+  {
+   "heldout_year": 2025,
+   "n_test": 17,
+   "model": "B + break index",
+   "rmse": 0.1791,
+   "mae": 0.149,
+   "d_rmse_vs_B": -0.0001,
+   "ci_low": -0.0174,
+   "ci_high": 0.0147
+  },
+  {
+   "heldout_year": 2025,
+   "n_test": 17,
+   "model": "B + tracked top speed",
+   "rmse": 0.1801,
+   "mae": 0.152,
+   "d_rmse_vs_B": 0.0009,
+   "ci_low": -0.0061,
+   "ci_high": 0.0064
+  },
+  {
+   "heldout_year": 2025,
+   "n_test": 17,
+   "model": "D Traditional + all tracking",
+   "rmse": 0.1923,
+   "mae": 0.157,
+   "d_rmse_vs_B": 0.0131,
+   "ci_low": -0.0093,
+   "ci_high": 0.0333
+  }
+ ],
+ "fs_cons": [
+  {
+   "model": "A1 Draft year",
+   "years_better_than_B": 0,
+   "mean_d_rmse": 0.029211831420693776,
+   "years_CI_excludes_0": 0,
+   "mean_d_rmse_x1000": 29.211831420693777
+  },
+  {
+   "model": "B + break index",
+   "years_better_than_B": 3,
+   "mean_d_rmse": -0.000816134881967435,
+   "years_CI_excludes_0": 0,
+   "mean_d_rmse_x1000": -0.816134881967435
+  },
+  {
+   "model": "B + tracked top speed",
+   "years_better_than_B": 1,
+   "mean_d_rmse": 0.00034008801431210006,
+   "years_CI_excludes_0": 0,
+   "mean_d_rmse_x1000": 0.34008801431210006
+  },
+  {
+   "model": "D Traditional + all tracking",
+   "years_better_than_B": 1,
+   "mean_d_rmse": 0.006115200439482484,
+   "years_CI_excludes_0": 0,
+   "mean_d_rmse_x1000": 6.115200439482484
+  }
+ ],
+ "legacy": [
+  {
+   "feature": "legacy_dagger_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "draft year (as earlier)",
+   "n": 106,
+   "coef": 1.3645,
+   "ci_low": 0.4342,
+   "ci_high": 2.2948,
+   "p": 0.004,
+   "p_BH": 0.0061
+  },
+  {
+   "feature": "legacy_dagger_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "+ traditional Combine",
+   "n": 87,
+   "coef": 1.8845,
+   "ci_low": 0.9494,
+   "ci_high": 2.8196,
+   "p": 0.0001,
+   "p_BH": 0.0005
+  },
+  {
+   "feature": "legacy_dagger_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "+ traditional + draft capital",
+   "n": 87,
+   "coef": 0.8536,
+   "ci_low": 0.0495,
+   "ci_high": 1.6577,
+   "p": 0.0375,
+   "p_BH": 0.1414
+  },
+  {
+   "feature": "legacy_dagger_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "draft year (as earlier)",
+   "n": 106,
+   "coef": 0.8399,
+   "ci_low": 0.3994,
+   "ci_high": 1.2804,
+   "p": 0.0002,
+   "p_BH": 0.0006
+  },
+  {
+   "feature": "legacy_dagger_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "+ traditional Combine",
+   "n": 87,
+   "coef": 0.9712,
+   "ci_low": 0.4565,
+   "ci_high": 1.4858,
+   "p": 0.0002,
+   "p_BH": 0.0007
+  },
+  {
+   "feature": "legacy_dagger_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "+ traditional + draft capital",
+   "n": 87,
+   "coef": 0.4868,
+   "ci_low": -0.0114,
+   "ci_high": 0.985,
+   "p": 0.0555,
+   "p_BH": 0.1414
+  },
+  {
+   "feature": "trk_route_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "draft year (as earlier)",
+   "n": 106,
+   "coef": 3.0175,
+   "ci_low": 1.3831,
+   "ci_high": 4.6518,
+   "p": 0.0003,
+   "p_BH": 0.0006
+  },
+  {
+   "feature": "trk_route_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "+ traditional Combine",
+   "n": 87,
+   "coef": 2.8466,
+   "ci_low": 0.7902,
+   "ci_high": 4.9031,
+   "p": 0.0067,
+   "p_BH": 0.0131
+  },
+  {
+   "feature": "trk_route_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "+ traditional + draft capital",
+   "n": 87,
+   "coef": 1.4555,
+   "ci_low": -0.1709,
+   "ci_high": 3.0818,
+   "p": 0.0794,
+   "p_BH": 0.1414
+  },
+  {
+   "feature": "trk_route_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "draft year (as earlier)",
+   "n": 106,
+   "coef": 1.4549,
+   "ci_low": 0.6649,
+   "ci_high": 2.2448,
+   "p": 0.0003,
+   "p_BH": 0.0006
+  },
+  {
+   "feature": "trk_route_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "+ traditional Combine",
+   "n": 87,
+   "coef": 1.4338,
+   "ci_low": 0.3626,
+   "ci_high": 2.505,
+   "p": 0.0087,
+   "p_BH": 0.0131
+  },
+  {
+   "feature": "trk_route_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "+ traditional + draft capital",
+   "n": 87,
+   "coef": 0.8167,
+   "ci_low": -0.14,
+   "ci_high": 1.7734,
+   "p": 0.0943,
+   "p_BH": 0.1414
+  },
+  {
+   "feature": "legacy_route_best_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "draft year (as earlier)",
+   "n": 106,
+   "coef": 1.0172,
+   "ci_low": -0.1877,
+   "ci_high": 2.2221,
+   "p": 0.098,
+   "p_BH": 0.1176
+  },
+  {
+   "feature": "legacy_route_best_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "+ traditional Combine",
+   "n": 87,
+   "coef": 0.6912,
+   "ci_low": -0.5552,
+   "ci_high": 1.9376,
+   "p": 0.2771,
+   "p_BH": 0.3325
+  },
+  {
+   "feature": "legacy_route_best_peak_accel",
+   "outcome": "log_snaps",
+   "adjustment": "+ traditional + draft capital",
+   "n": 87,
+   "coef": 0.1015,
+   "ci_low": -0.9972,
+   "ci_high": 1.2002,
+   "p": 0.8563,
+   "p_BH": 0.8563
+  },
+  {
+   "feature": "legacy_route_best_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "draft year (as earlier)",
+   "n": 106,
+   "coef": 0.3568,
+   "ci_low": -0.3336,
+   "ci_high": 1.0471,
+   "p": 0.3111,
+   "p_BH": 0.3111
+  },
+  {
+   "feature": "legacy_route_best_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "+ traditional Combine",
+   "n": 87,
+   "coef": 0.1883,
+   "ci_low": -0.5512,
+   "ci_high": 0.9279,
+   "p": 0.6178,
+   "p_BH": 0.6178
+  },
+  {
+   "feature": "legacy_route_best_peak_accel",
+   "outcome": "log_starts",
+   "adjustment": "+ traditional + draft capital",
+   "n": 87,
+   "coef": -0.1342,
+   "ci_low": -0.6972,
+   "ci_high": 0.4288,
+   "p": 0.6403,
+   "p_BH": 0.7684
+  }
+ ],
+ "car_n": 106,
+ "car": [
+  {
+   "algo": "baseline",
+   "model": "A0 Training mean",
+   "n_repeats": 20,
+   "rmse": 2.7224,
+   "rmse_sd": 0.0218,
+   "mae": 2.307,
+   "r2": -0.0208,
+   "r2_sd": 0.0164,
+   "loyo_rmse": 2.8399
+  },
+  {
+   "algo": "ridge",
+   "model": "A1 Draft year",
+   "n_repeats": 20,
+   "rmse": 2.6284,
+   "rmse_sd": 0.0313,
+   "mae": 2.1941,
+   "r2": 0.0485,
+   "r2_sd": 0.0228,
+   "loyo_rmse": 2.8321
+  },
+  {
+   "algo": "ridge",
+   "model": "B Traditional Combine",
+   "n_repeats": 20,
+   "rmse": 2.3942,
+   "rmse_sd": 0.0366,
+   "mae": 1.9522,
+   "r2": 0.2104,
+   "r2_sd": 0.0241,
+   "loyo_rmse": 2.6869
+  },
+  {
+   "algo": "ridge",
+   "model": "C Combine tracking",
+   "n_repeats": 20,
+   "rmse": 2.5687,
+   "rmse_sd": 0.0388,
+   "mae": 2.1008,
+   "r2": 0.0912,
+   "r2_sd": 0.0274,
+   "loyo_rmse": 2.8497
+  },
+  {
+   "algo": "ridge",
+   "model": "D Traditional + tracking",
+   "n_repeats": 20,
+   "rmse": 2.398,
+   "rmse_sd": 0.0436,
+   "mae": 1.951,
+   "r2": 0.2078,
+   "r2_sd": 0.0286,
+   "loyo_rmse": 2.6755
+  }
+ ],
+ "car_pair": {
+  "comparison": "D Traditional + tracking minus B Traditional Combine",
+  "algo": "ridge",
+  "mean_rmse_diff": 0.003824555835610277,
+  "p2.5": -0.05766757528319292,
+  "p97.5": 0.04525903541051884,
+  "share_repeats_first_better": 0.5
+ },
+ "game_break": [
+  {
+   "route": "HITCH",
+   "trait": "decel_rate",
+   "n_WRs": 53,
+   "r": -0.0164,
+   "ci_low": -0.294,
+   "ci_high": 0.2778,
+   "p": 0.9073,
+   "coef_per_SD_adj_weight": 0.0013,
+   "p_adj_weight": 0.9769
+  },
+  {
+   "route": "GO",
+   "trait": "route_peak_speed",
+   "n_WRs": 62,
+   "r": -0.2435,
+   "ci_low": -0.4134,
+   "ci_high": -0.0596,
+   "p": 0.0565,
+   "coef_per_SD_adj_weight": -0.0864,
+   "p_adj_weight": 0.0005
+  }
+ ],
+ "resid_r": 0.303173329937152,
+ "resid_p": 0.01660775962670894,
+ "resid_lo": 0.06251070206423656,
+ "resid_hi": 0.522777580561545,
+ "resid_n": 62,
+ "resid_rho": 0.31338923723905215,
+ "resid_trim_r": 0.38900814946277734,
+ "resid_trim_n": 61,
+ "resid_soe_r": 0.22164850469287692,
+ "resid_soe_p": 0.08338916452595431,
+ "resid_soe_n": 62,
+ "pairs_n": 93,
+ "pairs_agree": 0.6989247311827957,
+ "pairs_p": 0.030484757621189407,
+ "pairs_game_gap": 0.2602114695340505,
+ "pairs_trk_gap": 0.42641085634408604,
+ "profiles": [
+  {
+   "pair": 1,
+   "player": "Jimmy Horn",
+   "draft": 2025,
+   "role": "tracked faster",
+   "40 (s)": 4.46,
+   "tracked top (yd/s)": 11.342,
+   "beyond 40 (yd/s)": 0.233,
+   "NFL GO p90 (yd/s)": 9.611,
+   "90% CI": "9.43\u201310.03",
+   "GO routes": 17,
+   "SOE (yd/route)": 0.126,
+   "SOE \u00b1SD": 0.133,
+   "routes": 68
+  },
+  {
+   "pair": 1,
+   "player": "Jamari Thrash",
+   "draft": 2024,
+   "role": "tracked slower",
+   "40 (s)": 4.46,
+   "tracked top (yd/s)": 10.881,
+   "beyond 40 (yd/s)": -0.228,
+   "NFL GO p90 (yd/s)": 8.526,
+   "90% CI": "8.37\u20138.62",
+   "GO routes": 52,
+   "SOE (yd/route)": -0.077,
+   "SOE \u00b1SD": 0.103,
+   "routes": 192
+  },
+  {
+   "pair": 2,
+   "player": "Jayden Reed",
+   "draft": 2023,
+   "role": "tracked faster",
+   "40 (s)": 4.45,
+   "tracked top (yd/s)": 11.299,
+   "beyond 40 (yd/s)": 0.166,
+   "NFL GO p90 (yd/s)": 9.34,
+   "90% CI": "9.22\u20139.50",
+   "GO routes": 100,
+   "SOE (yd/route)": 0.091,
+   "SOE \u00b1SD": 0.06,
+   "routes": 773
+  },
+  {
+   "pair": 2,
+   "player": "Malik Washington",
+   "draft": 2024,
+   "role": "tracked slower",
+   "40 (s)": 4.47,
+   "tracked top (yd/s)": 11.008,
+   "beyond 40 (yd/s)": -0.078,
+   "NFL GO p90 (yd/s)": 8.575,
+   "90% CI": "8.26\u20138.69",
+   "GO routes": 80,
+   "SOE (yd/route)": 0.201,
+   "SOE \u00b1SD": 0.072,
+   "routes": 507
+  },
+  {
+   "pair": 3,
+   "player": "Demario Douglas",
+   "draft": 2023,
+   "role": "tracked faster",
+   "40 (s)": 4.44,
+   "tracked top (yd/s)": 11.307,
+   "beyond 40 (yd/s)": 0.15,
+   "NFL GO p90 (yd/s)": 8.943,
+   "90% CI": "8.79\u20139.14",
+   "GO routes": 125,
+   "SOE (yd/route)": 0.183,
+   "SOE \u00b1SD": 0.058,
+   "routes": 828
+  },
+  {
+   "pair": 3,
+   "player": "Luke McCaffrey",
+   "draft": 2024,
+   "role": "tracked slower",
+   "40 (s)": 4.46,
+   "tracked top (yd/s)": 11.028,
+   "beyond 40 (yd/s)": -0.082,
+   "NFL GO p90 (yd/s)": 9.021,
+   "90% CI": "8.71\u20139.28",
+   "GO routes": 54,
+   "SOE (yd/route)": 0.15,
+   "SOE \u00b1SD": 0.093,
+   "routes": 262
+  },
+  {
+   "pair": 4,
+   "player": "Jalin Hyatt",
+   "draft": 2023,
+   "role": "tracked faster",
+   "40 (s)": 4.4,
+   "tracked top (yd/s)": 11.635,
+   "beyond 40 (yd/s)": 0.383,
+   "NFL GO p90 (yd/s)": 9.325,
+   "90% CI": "9.14\u20139.45",
+   "GO routes": 196,
+   "SOE (yd/route)": 0.116,
+   "SOE \u00b1SD": 0.07,
+   "routes": 549
+  },
+  {
+   "pair": 4,
+   "player": "Jaylin Noel",
+   "draft": 2025,
+   "role": "tracked slower",
+   "40 (s)": 4.39,
+   "tracked top (yd/s)": 11.325,
+   "beyond 40 (yd/s)": 0.049,
+   "NFL GO p90 (yd/s)": 9.097,
+   "90% CI": "8.46\u20139.40",
+   "GO routes": 19,
+   "SOE (yd/route)": 0.019,
+   "SOE \u00b1SD": 0.106,
+   "routes": 174
+  }
+ ]
+}
